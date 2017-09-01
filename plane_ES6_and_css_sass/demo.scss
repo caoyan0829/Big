@@ -1,0 +1,95 @@
+@charset "utf-8";
+* {margin: 0; border: none; padding: 0;}
+body, html {width: 100%; height: 100%; overflow: hidden;}
+ul, li {list-style: none;}
+
+$width:480px;
+@mixin pos{
+    position: absolute;
+}
+#main {
+    width: $width;
+    height: 100%;
+    background: url(images/bg.jpg) repeat-y;
+    margin: 0 auto;
+    position: relative;
+    #list {
+        width: 100px + 100px;
+        @include pos;
+        left: 140px;
+        top: (10px*10);
+        li {
+            width: 198px;
+            height: 70px;
+            border: 1px solid black;
+            background: #f46;
+            color: white;
+            font: {
+                size: 30px;
+                family: "微软雅黑";
+            }
+            text-align: center;
+            line-height: 70px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    };
+    .logo {
+        width: 428px; height: 104px;
+        background: url(images/logo.png) no-repeat;
+        @include pos; 
+        left: 26px; top: 20%;
+    }
+    .load {
+        width: 200px; height: 42px;
+        background: url(images/loading1.png) no-repeat;
+        @include pos; left: 140px; top: 70%;
+    }
+    .Myself{
+        width: 98px; height: 122px;
+        background: url(images/me.png) no-repeat;
+        @include pos;
+    }
+    .score{
+        width: 100px;
+        height: 30px;
+        background: pink;
+        text-align: center;
+        line-height: 30px;
+        @include pos;
+        right: 0;
+        top: 0;
+    }
+    .bullet {
+        width: 7px; height: 18px;
+        background: url(images/bullet.png) no-repeat;
+        @include pos;
+    }
+    .bullet-die {
+        width: (10px*4); height: 43px;
+        background: url(images/die1.png) no-repeat;
+        @include pos;
+    }
+    .enemy-large {
+        width: 165px; height: 256px;
+        background: url(images/plane3.png) no-repeat;
+        @include pos;
+    }
+    .enemy-middle {
+        width: 70px; height: 92px;
+        background: url(images/plane2.png) no-repeat;
+        @include pos;
+    }
+    .enemy-small {
+        width: 59px; height: 36px;
+        background: url(images/plane1.png) no-repeat;
+        @include pos;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax.js"></script>
+		<script>
+			onload=function(){
+				let ul=document.getElementById("list");
+				ajax({
+					url: "http://60.205.181.47/myPHPCode4/getRank.php",
+					data:{},
+					success: function(data){
+						//console.log(data);
+						
+						let arr = JSON.parse(data);
+						
+						for (let i=0; i<arr.length; i++) {
+							let obj = arr[i];
+							
+							let li = document.createElement("li");
+							ul.appendChild(li);
+							li.innerHTML = i+1 + ". [" + obj.name + "] : " + obj.score;
+						}
+					}
+				})
+			}
+		</script>
+		<style>
+			*{margin: 0;padding: 0;}
+			li{
+				padding: 10px;
+				height: 20px;
+				border: 1px solid black;
+				background: #EFBF6B;
+				color: white;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				line-height: 20px;
+				margin-bottom: 10px;
+				border-radius: 5px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul id="list">
+			
+		</ul>
+	</body>
+</html>
