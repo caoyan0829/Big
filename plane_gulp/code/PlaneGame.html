@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>  
+		<meta charset="UTF-8"/>
+		<title></title>
+		<link href="PlaneGame.css" rel="stylesheet"/>
+		<script src="common.js"></script>
+		<script src="move.js"></script>
+		<script src="myself.js"></script>
+		<script src="GameEngine.js"></script>
+		<script src="Bullet.js"></script>
+		<script src="enemy.js "></script>
+		<script src="ajax.js"></script>
+		<script>
+			//打飞机游戏
+			//游戏引擎： 对象
+			//我的飞机： 对象
+			//子弹： 构造函数
+			//敌机： 构造函数
+			window.onload=function(){
+				
+				var ul=document.getElementById("list");
+				var ali=ul.getElementsByTagName("li");
+				
+				for(var i=0;i<ali.length;i++){
+					ali[i].onclick=function(){
+						//点击移除  初始页面
+						ul.parentNode.removeChild(ul);
+						//点击进入游戏
+						GameEngine.init();
+						GameEngine.star();
+						//子弹发射时间间隔
+						Myself.Pinlv=parseInt(this.value) 
+					}
+				}
+				
+				
+//				var a={
+//					ele:"1",
+//					init:function(){
+//						console.log(this.ele); //1  
+//						this.ele="2";
+//						console.log(this)   //a.ele=2
+//						//return this;
+//					}
+//				
+//				}
+//				a.init()
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<ul id="list">
+				<li value="800">超级困难</li>
+				<li value="600">非常困难</li>
+				<li value="400">比较困难</li>
+				<li value="200">春哥附体</li>
+			</ul>
+		</div>
+	</body>
+</html>
