@@ -1,0 +1,33 @@
+
+[
+	{
+		"id": 101,
+		"img":"images/hotsametop-top3.jpg",
+		"oname":"Dolce & Gabbana",
+		"name": "道里斯",
+		"price": "4488",
+		"oprice": "6588",
+		"unit": "￥",
+		"num": "453778DVUDT4274-NAVY"
+	},
+	{
+		"id": 102,
+		"img": "images/hotsametop-top2.jpg",
+		"oname":"Dolce & Gabbana",
+		"name": "古驰",
+		"price": "2488",
+		"oprice": "4368",
+		"unit": "￥",
+		"num": "956346YREWA4274-GECA"
+	},
+	{
+		"id": 103,
+		"img": "images/hotsametop-bottom1.jpg",
+		"oname":"Dolce & Gabbana",
+		"name": "宜必思",
+		"price": "7312",
+		"oprice": "12288",
+		"unit": "￥",
+		"num": "529640GDRYJ5734-IRBD"
+	}
+]
